@@ -6,6 +6,7 @@ import { useActiveWeb3React } from 'app/services/web3'
 
 import LegacySwap from '../legacy/swap'
 import TridentSwap from '../trident/swap'
+import { SwapLayoutWithChart } from 'app/layouts/SwapLayoutWithChart'
 
 export interface SwapProps {
   banners: BannerType[]
@@ -23,6 +24,6 @@ const Swap = ({ banners }: SwapProps) => {
   return <LegacySwap banners={banners} />
 }
 
-Swap.Layout = SwapLayout('swap-page')
+Swap.Layout = SwapLayoutWithChart('swap-page')
 // Remove the export statement for Swap component
 export default Swap
